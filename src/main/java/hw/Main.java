@@ -7,7 +7,7 @@ import static hw.FizzBuzz.fizzBuzz;
 public class Main {
 
     public static void main(final String[] args) {
-        int max = 0;
+        int max = 0; //number up to which fizzBuzz is run
         if (args.length > 0) {
             try {
                 max = Integer.parseInt(args[0]);
@@ -22,12 +22,12 @@ public class Main {
                  * zero value means some type of error. But it still ends the program
                  * and returns to the OS.  So it’s more of a status message to you.*/
         }
-        else{
+        else{ //no argument is entered
            System.out.println("You need enter an argument");
         }
-        if (max < 1){
+        if (max < 1){ //checking to make sure that integer is a natural number
             System.out.println("You need to enter a number more than 0");
         }
-        fizzBuzz(max);
+        fizzBuzz(max); //calling the fizzBuzz method and indicating which number to go to.
     }
 }
