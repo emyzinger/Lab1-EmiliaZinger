@@ -1,8 +1,6 @@
 package hw;
 
-import java.util.Arrays;
-
-import static hw.FizzBuzz.fizzBuzz;
+import static hw.FizzBuzz.fizzBuzzArray;
 
 public class Main {
 
@@ -22,12 +20,15 @@ public class Main {
                  * zero value means some type of error. But it still ends the program
                  * and returns to the OS.  So it’s more of a status message to you.*/
         }
-        else{ //no argument is entered
-           System.out.println("You need enter an argument");
+        String fizzBuzzArray[];
+        fizzBuzzArray= fizzBuzzArray(max);
+        if (fizzBuzzArray == null){
+            System.out.println("The array is null");
         }
-        if (max < 1){ //checking to make sure that integer is a natural number
-            System.out.println("You need to enter a number more than 0");
+        else {
+            for (int i = 0; i < max; i++) {
+                System.out.println(fizzBuzzArray[i]);
+            }
         }
-        fizzBuzz(max); //calling the fizzBuzz method and indicating which number to go to.
     }
 }
