@@ -1,5 +1,8 @@
 package hw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzz {
 
     public static void fizzBuzz(int upperBound) {
@@ -48,6 +51,34 @@ public class FizzBuzz {
             iteration++; //makes the loop keep going and not be infinite
         }
         return fizzBuzz;
+    }
+
+    public static List<String> fizzBuzzList(final int upperBound){ //do fizzBuzz returning a list
+        List<String> fizzBuzz = new ArrayList<String>();
+        if (upperBound<= 0){ //if the upper bound is 0 or lower the array will return null as fizzBuzz cannot work
+            return null;
+        }
+        else {
+            int iteration = 1; //number which will be printed
+            while(iteration <= upperBound) { //making it loop the necessary number of times
+                if ((iteration % 3 == 0)&&(iteration % 5 == 0)){ //divisible by 3 and 5
+                    fizzBuzz.add("FizzBuzz");
+                }
+                else
+                if (iteration % 3 == 0){ //divisible by 3
+                    fizzBuzz.add("Fizz");
+                }
+                else
+                if(iteration % 5 == 0){ //divisible by 5
+                    fizzBuzz.add("Buzz");
+                }
+                else{ //not divisible by anything
+                    fizzBuzz.add(String.valueOf(iteration));
+                }
+                iteration++; //makes the loop keep going and not be infinite
+            }
+            return fizzBuzz;
+        }
     }
 
 }

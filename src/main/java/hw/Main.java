@@ -1,6 +1,10 @@
 package hw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static hw.FizzBuzz.fizzBuzzArray;
+import static hw.FizzBuzz.fizzBuzzList;
 
 public class Main {
 
@@ -20,14 +24,13 @@ public class Main {
                  * zero value means some type of error. But it still ends the program
                  * and returns to the OS.  So it’s more of a status message to you.*/
         }
-        String fizzBuzzArray[];
-        fizzBuzzArray= fizzBuzzArray(max);
-        if (fizzBuzzArray == null){
+        List<String> fizzBuzzList = fizzBuzzList(max);
+        if (fizzBuzzList == null) {
             System.out.println("The array is null");
         }
         else {
-            for (int i = 0; i < max; i++) {
-                System.out.println(fizzBuzzArray[i]);
+            for (int i = 0; i < fizzBuzzList.size(); i++) {
+                System.out.println(fizzBuzzList.get(i));
             }
         }
     }
